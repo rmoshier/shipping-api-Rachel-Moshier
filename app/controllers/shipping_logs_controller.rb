@@ -21,7 +21,6 @@ include ActiveMerchant::Shipping
     @ups_rates = response.rates.sort_by(&:price).collect {|rate| [rate.service_name, rate.price]}
 
     render json: @ups_rates.as_json
-    # render json: {}
   end
 
 end
